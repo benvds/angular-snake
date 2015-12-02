@@ -1,3 +1,5 @@
+var path = require('path');
+// var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 
@@ -13,16 +15,19 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader:"babel" },
-      { test: /\.less$/, loader: "style!css!less"},
+      // { test: /\.scss$/, loader: "style!css!resolve-url!sass?sourceMap"},
+      { test: /\.scss$/, loader: "style!css!resolve-url!sass?sourceMap"},
       { test: /\.json$/, loader: "json" },
 
       // load raw html files
       { test: /\.html$/, exclude: /node_modules/, loader:"raw" },
 
       // load fonts and images
-      { test: /\.(ttf|eot|svg|otf)$/, loader: "file" },
-      { test: /\.woff(2)?$/, loader: "url?limit=10000&minetype=application/font-woff"}
+      { test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/, loader: "file" }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./node_modules")]
   },
 
   // support source maps

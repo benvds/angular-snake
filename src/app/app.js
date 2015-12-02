@@ -1,5 +1,5 @@
 import 'angular';
-import 'app/app.less';
+import 'app/app.scss';
 
 import navbar from 'navbar/navbar';
 import snake  from 'snake/snake';

@@ -1,4 +1,3 @@
-import 'snake/snake.less';
 import config from 'snake/config.json';
 
 export default angular.module('snake', [])

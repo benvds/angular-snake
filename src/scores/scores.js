@@ -18,6 +18,7 @@ class ScoresController {
   constructor($scope, storage) {
     this.scores = storage.getItem('SCORES') || [];
     this.storage = storage;
+    console.log(`storage = ${ JSON.stringify(storage, null, 4) }`);
 
     $scope.$on('game:over', this._updateScore.bind(this));
   }

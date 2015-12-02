@@ -1,5 +1,3 @@
-import 'navbar/navbar.less';
-
 export default angular.module('navbar', [])
   .directive('navbar', navbar);
 
