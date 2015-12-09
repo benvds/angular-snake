@@ -5,9 +5,16 @@ module.exports = {
 
     // set the context (optional)
     context: __dirname + '/src',
+
     entry: './app/app.js',
 
-        // enable loading modules relatively
+    output: {
+        filename: "bundle.js?[hash]",
+        path: __dirname + "/assets",
+        publicPath: "/assets/"
+    },
+
+    // enable loading modules relatively
     resolve: {
         root: [__dirname + "/src"]
     },
