@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --inline --colors --content-base src/",
     "bundle": "webpack -p ./src/bundle.js",
-    "test": "mocha --harmony --reporter dot --compilers js:babel-core/register"
+    "test": "mocha --harmony --reporter dot --compilers js:babel-core/register",
+    "test:watch": "npm test -- --watch",
+    "test:watch:all": "npm run test:watch 'test/**/*.js'"
   },
   "author": "Nir Kaufman",
   "license": "MIT",

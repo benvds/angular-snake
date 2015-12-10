@@ -1,19 +1,15 @@
+import { describe, it } from 'mocha';
 import assert from 'assert';
-// import * as util from '../lib/util';
+import { Storage } from '../src/common/storage';
 
-describe('snake', function() {
-    // describe('.mapDays(calendar, callback)', function() {
-        it('runs tests 2', function() {
-            // let cal = [
-            //     [1, 2],
-            //     [3, 4]
-            // ];
-            //
-            // let result = util.mapDays(cal, (day) => day + 1);
-            //
-            // assert.equal(2, result[0][0]);
-            // assert.equal(5, result[1][1]);
-            assert.equal(true, false);
-        });
-    // });
+describe('Storage', function() {
+    const localStorage = {
+        getItem: () => {},
+        setItem: () => {},
+    };
+    const $window = { localStorage: localStorage };
+
+    it('contains the getItem method', function() {
+        assert.equal(typeof (new Storage($window)).getItem, 'function');
+    });
 });
