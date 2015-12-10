@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha';
 import assert from 'assert';
-import { Storage } from '../src/common/storage';
+import { Storage } from '../../src/common/storage';
 
 describe('Storage', function() {
     const localStorage = {
