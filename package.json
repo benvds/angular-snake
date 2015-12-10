@@ -9,7 +9,9 @@
     "test": "mocha --harmony --reporter dot --compilers js:babel-core/register",
     "test:watch": "npm test -- --watch",
     "test:watch:all": "npm run test:watch 'test/unit/**/*.js'",
-    "karma": "karma"
+    "test:browser": "webpack-dev-server 'mocha!../test/browser/test.js' --output-filename /test/browser.js --port 8081",
+    "karma": "karma",
+    "webpack": "webpack"
   },
   "author": "Nir Kaufman",
   "license": "MIT",
@@ -28,6 +30,7 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.4",
+    "mocha-loader": "^0.7.1",
     "node-libs-browser": "0.5.3",
     "node-sass": "^3.4.2",
     "phantomjs": "^1.9.19",
