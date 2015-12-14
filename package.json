@@ -9,7 +9,10 @@
     "test": "mocha --harmony --reporter dot --compilers js:babel-core/register",
     "test:watch": "npm test -- --watch",
     "test:watch:all": "npm run test:watch 'test/unit/**/*.js'",
-    "test:browser": "webpack-dev-server --inline --colors --port 8081 --config test-browser.webpack.config.js --content-base test/browser/"
+    "test:browser": "webpack-dev-server --inline --colors --port 8081 --config test-browser.webpack.config.js --content-base test/browser/",
+    "dev": "webpack-dev-server --inline --hot --TARGET=DEV",
+    "build": "webpack --TARGET=BUILD",
+    "dist": "webpack --TARGET=DIST"
   },
   "author": "Nir Kaufman",
   "license": "MIT",
