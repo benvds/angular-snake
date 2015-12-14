@@ -3,20 +3,15 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 
-    // set the context (optional)
-    context: __dirname + '/src',
-
-    entry: './app/app.js',
+    entry: 'mocha!./test/browser/index.js',
 
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/build/",
-        publicPath: "/assets/"
+        filename: "tests-bundle.js"
     },
 
     // enable loading modules relatively
     resolve: {
-        root: [__dirname + "/src"]
+        root: [__dirname + '/test/browser/', __dirname + '/src']
     },
 
     module: {
