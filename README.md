@@ -1,9 +1,17 @@
-Reference project for the AngularJS-IL talk about webpack and angular
-That took place at 25/5/15 @ `google campus TLV.
+Test repo for using angular in combination with es6 modules, webpack and composed tests.
 
-How to tun this demo
----------------------------------------------
+run a specific test:
 
-1. run npm install
-2. run npm start
-3. navigate to http://localhost:8080/
+    npm test -- 'test/unit/2nd-test'
+
+run all tests:
+
+    npm test
+
+run and watch all tests:
+
+    npm run test:watch:all
+
+run browser tests:
+
+    npm run test:browser
